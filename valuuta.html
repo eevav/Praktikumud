@@ -1,0 +1,31 @@
+
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Valuuta kalkulaator</title>
+		<script type="text/javascript">
+            
+            
+			function arvuta (){
+                var eur = parseFloat(document.getElementById("eur").value);
+                var kurss = parseFloat(document.getElementById("kurss").value);
+                var komisjon = parseFloat(document.getElementById("komisjon").value);
+                
+                vastus = ((eur * kurss) - komisjon).toFixed(2);
+                document.getElementById("vastus").innerHTML = vastus;
+                
+				
+            }
+		</script>
+		</head>
+	<body bgcolor="#E6E6FA"> 
+		<h1 STYLE = 'Color: Blue'>Arvuta</h1>
+        <input type="text"  id="eur" /> EUR <br />
+        <input type="text" id="kurss" /> Kurss <br />
+        <input type="text" id="komisjon" /> Komisjonitasu <br />
+		<input type="button" value="Arvuta" onclick="arvuta ()" /><br />
+        <B> <span id="vastus">vastuse koht</span>  <B> <br /><br />
+	</body>
+</html>
